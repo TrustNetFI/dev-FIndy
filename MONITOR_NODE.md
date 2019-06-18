@@ -7,7 +7,7 @@ Instructions for running the VON Network can be found from their [Github project
 
 Following information is needed in order to run the monitoring node:
 
-* Access to pool transaction genesis file `pool_transactions_genesis`.
+* Access to pool transaction genesis file `pool_transactions_genesis` stored in a known location.
 
 ## AWS EC2 Instance Setup
 
@@ -22,7 +22,7 @@ Following is an example setup for monitoring node in AWS EC2:
 Following commands need to be run in a FIndy Steward Node in order to create DID for monitor node with the correct role:
 
 ```
-pool create findy-dev-ledger gen_txn_file=/home/nixu/pool_transactions_genesis
+pool create findy-dev-ledger gen_txn_file=<location of pool_transactions_genesis file>
 pool connect findy-dev-ledger
 did new seed=******* metadata="network monitor"
  
